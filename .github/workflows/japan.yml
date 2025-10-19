@@ -26,6 +26,11 @@ jobs:
           unzip ghidra.zip
           mv ghidra_11.4.2_PUBLIC ghidra
  
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
       - name: Get cache key
         id: get_cache_key
         run: |

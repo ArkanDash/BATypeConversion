@@ -25,6 +25,11 @@ jobs:
           curl -L -o ghidra.zip "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.2_build/ghidra_11.4.2_PUBLIC_20250826.zip"
           unzip ghidra.zip
           mv ghidra_11.4.2_PUBLIC ghidra
+      
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
 
       - name: Get cache key
         id: get_cache_key
