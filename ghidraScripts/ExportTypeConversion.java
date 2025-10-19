@@ -92,6 +92,7 @@ public class ExportTypeConversion extends GhidraScript {
 				.replace("::ProtocolConverter_", "_")
 				.replace("param_2", "protocol").replace("uVar1", "PVar1")
 				.replace("::", "_").replace("uint ", "uint32_t ")
+				.replace("(uint)", "(uint32_t)")
 				.replace("uint32_t PVar1", "Protocol__Enum PVar1")
 				.replace("uint32_t MX", "int32_t MX")
 				.replace("(undefined8 param_1,uint32_t protocol)", "(Protocol__Enum protocol)")
